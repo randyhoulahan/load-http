@@ -1,0 +1,59 @@
+{
+  "name": "@houlagins/load-http",
+  "version": "1.0.0",
+  "author": "Randy Houlahan",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "DEBUG=true dist-builder",
+    "test:e2e": "vue-cli-service test:e2e",
+    "lint": "vue-cli-service lint --fix",
+    "release": "yarn publish --access=public --tag latest",
+    "test:e2e:headless": "vue-cli-service test:e2e --headless"
+  },
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "browser": {
+    "./umd": "dist/legacy/umd/index.umd.min.js",
+    "./browser": "dist/browser/index.min.js",
+    "./": "dist/browser/index.min.js"
+  },
+  "unpkg": "dist/browser/index.min.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "dependencies": {
+    "check-ie": "~2.0.0",
+    "core-js": "~3.6.4",
+    "ky": "~0.24.0",
+    "ky-universal": "~0.8.2",
+    "whatwg-fetch": "~3.4.1"
+  },
+  "devDependencies": {
+    "@houlagins/dist-builder": "~1.0.1",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0"
+  },
+  "exports": {
+    ".": [
+      {
+        "import": "./dist/esm/index.js",
+        "require": "./dist/legacy/cjs/index.common.cjs",
+        "default": "./dist/esm/index.js"
+      },
+      "./dist/legacy/umd/index.umd.min.js"
+    ]
+  },
+  "homepage": "https://github.com/randyhoulahan/load-http/tree/master#readme",
+  "jsnext:main": "dist/esm/index.min.js",
+  "license": "MIT",
+  "readme": "https://github.com/randyhoulahan/load-http/tree/master#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randyhoulahan/load-http.git",
+    "directory": "packages/load-http"
+  },
+  "source": "src/index.js",
+  "src": "src/index.js",
+  "umd": "dist/legacy/umd/index.umd.min.js",
+  "web": "dist/browser/index.min.js"
+}

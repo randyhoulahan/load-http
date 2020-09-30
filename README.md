@@ -10,11 +10,11 @@ A wrapper for for ky-universal that will dynamically auto install polyfills wear
 ## Install
 
 ```bash
-yarn add @scbd/load-http
+yarn add @houlagins/load-http
 
 #OR 
 
-npm install @scbd/load-http
+npm install @houlagins/load-http
 ```
 
 ## API
@@ -22,7 +22,7 @@ npm install @scbd/load-http
 ### get$http
 
 ```js
-import { get$http } from '@scbd/load-http'
+import { get$http } from '@houlagins/load-http'
 
 async function getData(){
   const $http   = await get$http()
