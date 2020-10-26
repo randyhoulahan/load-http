@@ -5,9 +5,11 @@ const legacy = { umd, cjs }
 const modern = { output: { dir: './dist/browser' } }
 const ssr    = { output: { dir: './dist/esm' } }
 
-const widget     = { legacy: true, modern: true }
-const testWidget = { legacy: true, modern: true }
+
+const browserEsmPackages = {
+  'ky-universal': 'https://unpkg.com/ky@~0.23'
+}
 
 export default {
-  legacy, modern, ssr
+  legacy, modern, ssr, browserEsmPackages
 }
